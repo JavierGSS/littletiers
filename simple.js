@@ -9,7 +9,7 @@ db.defaults({ posts: [] }).write();
 
 // add post
 // ----------------------------
-/*db.get("posts")
+db.get("posts")
   .push({ id: 1, title: "lowdb is cool", published: true })
   .write();
 db.get("posts")
@@ -20,7 +20,7 @@ db.get("posts")
   .write();
 db.get("posts")
   .push({ id: 4, title: "Random title counts", published: false })
-  .write();*/
+  .write();
 
 //db.get("posts").pop().write();
 

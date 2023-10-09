@@ -1,24 +1,24 @@
 {
   "posts": [
     {
-      "id": 1,
-      "title": "lowdb is cool",
-      "published": true
+      "id": "1",
+      "title": "ping",
+      "published": "false"
     },
     {
-      "id": 2,
-      "title": "Nice work fella!",
-      "published": true
+      "id": "2",
+      "title": "pang",
+      "published": "true"
     },
     {
-      "id": 3,
-      "title": "Awesome tricks",
-      "published": true
+      "id": "3",
+      "title": "peng",
+      "published": "false"
     },
     {
-      "id": 4,
-      "title": "Random title counts",
-      "published": false
+      "id": "4",
+      "title": "pong",
+      "published": "true"
     }
   ]
 }
