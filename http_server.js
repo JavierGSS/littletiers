@@ -26,8 +26,10 @@ app.get("/data", function (req, res) {
 //      curl http://localhost:3000/posts/ping/1/false
 // ----------------------------------------------------
 app.get("/posts/:title/:id/:published", function (req, res) {
+  var transf = req.params.id;
+  var numberId = parseInt(transf);
   var post = {
-    id: req.params.id,
+    id: numberId,
     title: req.params.title,
     published: req.params.published,
   };

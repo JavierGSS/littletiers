@@ -14,10 +14,36 @@
       <button type="button" class="btn btn-primary" onclick="data()">
         Show All Data
       </button>
+
+      <br />
       <br />
       <div id="published"></div>
-      <button type="button" class="btn btn-primary" onclick="published()">
+      <button type="button" class="btn btn-primary" onclick="publishedData()">
         Show Published Data
+      </button>
+      <br />
+      <br />
+
+      <input type="text" id="id" placeholder="id" /><br />
+      <input type="text" id="title" placeholder="title" /><br />
+      <input type="text" id="publishedPost" placeholder="published" /><br />
+      <button type="button" class="btn btn-primary" onclick="post()">
+        Create Post
+      </button>
+
+      <br />
+      <br />
+      <input type="text" id="id2" placeholder="id" /><br />
+      <button type="button" class="btn btn-primary" onclick="deletePost()">
+        Delete Post
+      </button>
+
+      <br />
+      <br />
+      <div id="filterBoolean"></div>
+      <input type="text" id="booleanPub" placeholder="published" /><br />
+      <button type="button" class="btn btn-primary" onclick="filter()">
+        Filter by Published
       </button>
     </main>
   </body>
@@ -37,7 +63,7 @@
       });
     }
 
-    function published() {
+    function publishedData() {
       var divPublished = document.getElementById("published");
       var url = "/published/true";
 
@@ -47,6 +73,49 @@
         } else {
           console.log(res);
           divPublished.innerHTML = JSON.stringify(res.body);
+        }
+      });
+    }
+
+    function post() {
+      var id = document.getElementById("id").value;
+      var title = document.getElementById("title").value;
+      var publishedPost = document.getElementById("publishedPost").value;
+      var url = `/posts/${title}/${id}/${publishedPost}`;
+
+      superagent.get(url).end(function (err, res) {
+        if (err) {
+          console.log(err);
+        } else {
+          console.log(res);
+        }
+      });
+    }
+
+    function deletePost() {
+      var id2 = document.getElementById("id2").value;
+      var url = `/delete/${id2}`;
+
+      superagent.get(url).end(function (err, res) {
+        if (err) {
+          console.log(err);
+        } else {
+          console.log(res);
+        }
+      });
+    }
+
+    function filter() {
+      var boolean = document.getElementById("booleanPub").value;
+      var filterBoolean = document.getElementById("filterBoolean");
+      var url = `/published/${boolean}`;
+
+      superagent.get(url).end(function (err, res) {
+        if (err) {
+          console.log(err);
+        } else {
+          console.log(res);
+          filterBoolean.innerHTML = JSON.stringify(res.body);
         }
       });
     }

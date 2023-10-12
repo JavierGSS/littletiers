@@ -1,24 +1,29 @@
 {
   "posts": [
     {
-      "id": "1",
-      "title": "ping",
-      "published": "false"
-    },
-    {
-      "id": "2",
-      "title": "pang",
+      "id": 1,
+      "title": "Hello World",
       "published": "true"
     },
     {
-      "id": "3",
-      "title": "peng",
+      "id": 2,
+      "title": "Bye World",
       "published": "false"
     },
     {
-      "id": "4",
-      "title": "pong",
+      "id": 3,
+      "title": "Bang",
       "published": "true"
+    },
+    {
+      "id": 4,
+      "title": "Bang",
+      "published": "true"
+    },
+    {
+      "id": 5,
+      "title": "De",
+      "published": "false"
     }
   ]
 }
